@@ -1,0 +1,76 @@
+books:
+  - id: 1
+    author: "J.R.R. Tolkien"
+    title: "O Senhor dos Anéis"
+    synopsis: "Uma jornada épica para destruir o Anel e derrotar Sauron."
+    image: "https://m.media-amazon.com/images/I/91OC+1IQ6bL.jpg"
+  - id: 2
+    author: "George Orwell"
+    title: "1984"
+    synopsis: "Um mundo distópico onde o governo controla tudo."
+    image: "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg"
+  - id: 3
+    author: "Harper Lee"
+    title: "O Sol é para Todos"
+    synopsis: "Uma poderosa história sobre racismo e injustiça no sul dos EUA."
+    image: "https://m.media-amazon.com/images/I/81OtwF1Co1L.jpg"
+  - id: 4
+    author: "F. Scott Fitzgerald"
+    title: "O Grande Gatsby"
+    synopsis: "Um retrato da era do jazz e a busca pelo sonho americano."
+    image: "https://m.media-amazon.com/images/I/81xXAy1MLUL.jpg"
+  - id: 5
+    author: "Gabriel García Márquez"
+    title: "Cem Anos de Solidão"
+    synopsis: "A saga da família Buendía na cidade fictícia de Macondo."
+    image: "https://m.media-amazon.com/images/I/71FkkO6lywL.jpg"
+  - id: 6
+    author: "Jane Austen"
+    title: "Orgulho e Preconceito"
+    synopsis: "O romance clássico sobre amor e convenções sociais."
+    image: "https://m.media-amazon.com/images/I/91hhCXj9dbL.jpg"
+  - id: 7
+    author: "J.K. Rowling"
+    title: "Harry Potter e a Pedra Filosofal"
+    synopsis: "O início da jornada do jovem bruxo Harry Potter."
+    image: "https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg"
+  - id: 8
+    author: "Leo Tolstoy"
+    title: "Guerra e Paz"
+    synopsis: "Uma análise profunda da sociedade russa durante as Guerras Napoleônicas."
+    image: "https://m.media-amazon.com/images/I/91eNNByx1tL.jpg"
+  - id: 9
+    author: "Franz Kafka"
+    title: "A Metamorfose"
+    synopsis: "A surreal transformação de um homem em inseto."
+    image: "https://m.media-amazon.com/images/I/71g7uFA6-PL.jpg"
+  - id: 10
+    author: "Aldous Huxley"
+    title: "Admirável Mundo Novo"
+    synopsis: "Uma sociedade futurista e sua busca por felicidade artificial."
+    image: "https://m.media-amazon.com/images/I/71P8MrWksSL.jpg"
+  - id: 11
+    author: "Herman Melville"
+    title: "Moby Dick"
+    synopsis: "A épica caçada à baleia branca."
+    image: "https://m.media-amazon.com/images/I/81r9RIlH4ML.jpg"
+  - id: 12
+    author: "Mary Shelley"
+    title: "Frankenstein"
+    synopsis: "A história do cientista que cria um monstro."
+    image: "https://m.media-amazon.com/images/I/71e0MH2+F6L.jpg"
+  - id: 13
+    author: "Mark Twain"
+    title: "As Aventuras de Huckleberry Finn"
+    synopsis: "A jornada de um garoto pelo rio Mississippi."
+    image: "https://m.media-amazon.com/images/I/81U5-K4obXL.jpg"
+  - id: 14
+    author: "Dostoiévski"
+    title: "Crime e Castigo"
+    synopsis: "O dilema moral de um jovem estudante após cometer um crime."
+    image: "https://m.media-amazon.com/images/I/81vpsIs58WL.jpg"
+  - id: 15
+    author: "Jules Verne"
+    title: "20.000 Léguas Submarinas"
+    synopsis: "As aventuras do Capitão Nemo pelo fundo do oceano."
+    image: "https://m.media-amazon.com/images/I/81TVtd8jA7L.jpg"
