@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import BookDetails from "./components/BookDetails";
 import NavPag from "./components/NavPag";
+import Login from "./user/Login";
+import Cadastro from "./user/Cadastro"; // Importe o Cadastro
 
 const App: React.FC = () => {
   return (
@@ -12,9 +14,11 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/livro/:id" element={<BookDetails />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
         </Routes>
       </Router>
-    </div> 
+    </div>
   );
 };
 

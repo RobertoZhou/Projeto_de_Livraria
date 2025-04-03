@@ -20,13 +20,13 @@ const NavPag: React.FC = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">Início</Link>
+              <Link className="nav-link active" to="/login">Login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link active" to="/cadastro">Registrar-se</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="#">Categorias</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="#">Contato</Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
