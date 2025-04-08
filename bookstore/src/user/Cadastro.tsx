@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-const Cadastro: React.FC = () => {
+const Cadastro = () => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     if (senha !== confirmarSenha) {
@@ -14,18 +14,42 @@ const Cadastro: React.FC = () => {
       return;
     }
 
-    alert(`Cadastro realizado com sucesso!\nNome: ${nome}\nEmail: ${email}`);
+    try {
+      const response = await fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: nome,
+          email: email,
+          password: senha,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Cadastro realizado com sucesso!");
+        // Redirecionar, limpar formulário, etc.
+      } else {
+        alert(data.message || "Erro ao cadastrar.");
+      }
+    } catch (error) {
+      alert("Erro ao conectar com o servidor.");
+      console.error("Erro no cadastro:", error);
+    }
   };
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
-      <div className="card p-4 shadow-lg" style={{ width: "400px" }}>
+      <div className="card p-4 shadow-lg" style={{ width: "350px" }}>
         <h2 className="text-center mb-4">Cadastro</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="nome" className="form-label">
-              Nome Completo
+              Nome
             </label>
             <input
               type="text"
@@ -83,7 +107,7 @@ const Cadastro: React.FC = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary w-100">
+          <button type="submit" className="btn btn-success w-100">
             Cadastrar
           </button>
         </form>

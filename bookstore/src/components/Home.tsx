@@ -1,29 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+interface Livro {
+  id: number;
+  title: string;
+  descricao: string;
+  capa: string;
+}
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
+  const [livros, setLivros] = useState<Livro[]>([]);
 
-  const livros = [
-    {
-      id: 1,
-      titulo: "O Senhor dos Anéis",
-      descricao: "Uma aventura épica na Terra Média.",
-      capa: "https://m.media-amazon.com/images/I/514M+qMYWSL._SY445_SX342_.jpg",
-    },
-    {
-      id: 2,
-      titulo: "Dom Casmurro",
-      descricao: "O clássico de Machado de Assis.",
-      capa: "https://m.media-amazon.com/images/I/41UQgnvavyL._SY445_SX342_.jpg",
-    },
-    {
-      id: 3,
-      titulo: "1984",
-      descricao: "Uma distopia de George Orwell.",
-      capa: "https://m.media-amazon.com/images/I/51feD87yuEL._SY445_SX342_.jpg",
-    },
-  ];
+  useEffect(() => {
+    fetch("http://localhost:5000/books")
+      .then((res) => res.json())
+      .then((data) => setLivros(data))
+      .catch((err) => console.error("Erro ao buscar livros:", err));
+  }, []);
 
   const verDetalhes = (id: number) => {
     navigate(`/livro/${id}`);
@@ -36,9 +30,9 @@ const Home: React.FC = () => {
         <div className="row justify-content-center mb-5">
           {livros.map((livro) => (
             <div className="card mx-3 mb-4" key={livro.id} style={{ width: "18rem" }}>
-              <img src={livro.capa} className="card-img-top" alt={`Capa de ${livro.titulo}`} />
+              <img src={livro.capa} className="card-img-top" alt={`Capa de ${livro.title}`} />
               <div className="card-body">
-                <h5 className="card-title">{livro.titulo}</h5>
+                <h5 className="card-title">{livro.title}</h5>
                 <p className="card-text">{livro.descricao}</p>
                 <button onClick={() => verDetalhes(livro.id)} className="btn btn-primary">
                   Ver detalhes
@@ -58,5 +52,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
-

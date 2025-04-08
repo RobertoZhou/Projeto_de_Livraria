@@ -4,7 +4,8 @@ import Home from "./components/Home";
 import BookDetails from "./components/BookDetails";
 import NavPag from "./components/NavPag";
 import Login from "./user/Login";
-import Cadastro from "./user/Cadastro"; // Importe o Cadastro
+import Cadastro from "./user/Cadastro";
+import Carrinho from "./components/Carrinho"; // Importe a página do carrinho
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Route path="/livro/:id" element={<BookDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/carrinho" element={<Carrinho />} />
         </Routes>
       </Router>
     </div>
